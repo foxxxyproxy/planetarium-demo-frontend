@@ -8,11 +8,17 @@
 
   font-weight: 400;
   font-style: normal;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.2;
   
   color: var(--main-text-color);
   background: var(--main-background-color);
+}
+
+@media(max-width: 770px){
+  :root{
+    font-size: 15px;
+  }
 }
 
 
@@ -121,7 +127,7 @@
 .page-header__logo {
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 500;
   margin:0.5em 0;
   margin-right:1em;
@@ -134,7 +140,7 @@
   .page-header__logo--mobile{
     display: flex;
   }
-  .page-header__tel--mobile{
+  .page-header__tel {
     display:none;
   }
 }
@@ -284,12 +290,12 @@
 
 .intro {
   width: 100%;
-  overflow: hidden;
+  
 }
 .intro__container{
   max-width: 1200px;
   margin: 0 auto;
-  padding: 5%;
+  padding: 1rem 5% 1rem;
 }
 
 .intro__button {
@@ -300,22 +306,6 @@
   text-align: left;
   margin-right: 1.6rem;
   min-width: 200px;
-}
-@media (max-width: 770px){
-  .intro__container{
-    width: 100%;
-    display:flex;
-    flex-direction: column;
-  }
-  .intro__button{
-    display: block;
-    width: 200px;
-    margin-bottom: 1em;
-    margin-right: 0;
-  }
-  .intro__button-container{
-    margin:0 auto;
-  }
 }
 
 .intro__button:hover {
@@ -345,17 +335,41 @@
 }
 
 .intro__title{
-  font-size: 6.5em;
+  font-size: 5.6em;
   margin-bottom: 1.5rem;
-  margin-top:4rem;
+  padding-top:3rem;
   font-weight: 400;
 }
 .intro__text {
   font-size:1.1rem;
+  line-height: 1.5;
+  margin:0;
 }
 
 .intro__text-wrapper{
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 770px){
+  .intro__container{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    text-align:center;
+  }
+  .intro__button{
+    display: block;
+    width: 200px;
+    margin-bottom: 1em;
+    margin-right: 0;
+  }
+  .intro__button-container{
+    margin:0 auto;
+  }
+
+  .intro__title{
+    font-size: 2.4rem;
+  }
 }
 
 .page-footer{
@@ -377,6 +391,7 @@
 }
 .page-footer__social{
   list-style: none;
+  width:10%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
@@ -396,12 +411,18 @@
 .scroll__text{
   position: relative;
   bottom: 0;
-  left: 40%;
+  left: 35%;
 }
 @media (max-width: 770px){
+  .scroll__container{
+    justify-content: center;
+  }
   .scroll__text{
-    bottom: 5em;
-    left: 25vw;
+    left: 0%;
+    bottom: 1em;
+  }
+  .page-footer__social{
+    display:none;
   }
 }
 .scroll{
@@ -429,7 +450,7 @@
   border-left: 1px solid var(--main-text-color);
   border-bottom: 1px solid var(--main-text-color);
   transform: rotate(-45deg);
-  bottom: -5px;
+  bottom: -0.6em;
   left: 45%;
 }
 
