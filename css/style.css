@@ -41,12 +41,30 @@
   overflow: hidden;
 }
 
+body{
+  background-color: #02050c;
+  background-image: url("../img/body-background@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 40%;
+  background-attachment: fixed;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5),
+(min-resolution: 144dpi),
+(min-resolution: 1.5dppx) {
+  body {
+    background-image: url("../img/body-background@2x.jpg");;
+  }
+}
+
 .main-container {
   width: 95%;
   margin: 0 auto;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  
 }
 
 .main-background {
@@ -62,7 +80,7 @@
   left: 0;
   right: 0;
   height: 100%;
-  background-image: url("./img/body-background-main-2@1x.png"), url("./img/body-background-main@1x.jpg");
+  background-image: url("../img/body-background-main-2@1x.png"), url("../img/body-background-main@1x.jpg");
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
   background-position: 50% 0;
@@ -72,7 +90,7 @@
 (min-resolution: 144dpi),
 (min-resolution: 1.5dppx) {
   .main-background::after {
-    background-image: url("./img/body-background-main-2@1x.png"), url("./img/body-background-main@2x.jpg");
+    background-image: url("../img/body-background-main-2@1x.png"), url("../img/body-background-main@2x.jpg");
   }
 }
 
@@ -81,7 +99,7 @@
   position: absolute;
   width:100%;
   height:100%;
-  background-image: url("./img/kid_VR@1x.png");
+  background-image: url("../img/kid_VR@1x.png");
   background-repeat: no-repeat;
   background-size: 430px 350px;
   background-position: 100% 100%;
@@ -95,7 +113,7 @@
 (min-resolution: 144dpi),
 (min-resolution: 1.5dppx) {
   .main-content--intro::after {
-    background-image: url("./img/kid_VR@2x.png");
+    background-image: url("../img/kid_VR@2x.png");
   }
 }
 
@@ -106,7 +124,7 @@
 }
 
 
-.page-header {
+.page-header, .page-footer {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -260,7 +278,7 @@
   background-position: 0 0;
   top: -25px;
   right: 0;
-  background-image: url("./img/open-button.svg");
+  background-image: url("../img/open-button.svg");
   background-repeat: no-repeat;
   background-size: 24px 19px;
   width: 24px;
@@ -278,6 +296,10 @@
 }
 
 .page-header__link:hover {
+  color: var(--brand-color-light);
+}
+
+.page-header__link--active{
   color: var(--brand-color-light);
 }
 
@@ -373,8 +395,7 @@
 }
 
 .page-footer{
-  width: 100%;
-  max-width: 1200px;
+  margin:0 auto;
 }
 
 .page-footer__social-image {
