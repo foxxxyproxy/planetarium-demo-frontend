@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>VR Planetarium</title>
+  <meta charset="UTF-8" />
+  <meta name="description" content='The website of educational virtual planetarium "Digital Planet VR"' />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/contacts.css" />
+</head>
+
+<body>
+  <div style="display:none">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <symbol id="icon-fb" viewBox="0 0 11 22">
+        <path
+          d="M0.351225 11.7172H2.73822V21.6452C2.73822 21.8412 2.89542 22 3.08944 22H7.13667C7.33069 22 7.4879 21.8412 7.4879 21.6452V11.764H10.2319C10.4104 11.764 10.5605 11.6287 10.5808 11.4497L10.9976 7.79467C11.0091 7.69411 10.9775 7.59341 10.9109 7.51797C10.8443 7.44246 10.7489 7.39924 10.6488 7.39924H7.48804V5.10812C7.48804 4.41746 7.85612 4.06723 8.58217 4.06723C8.68564 4.06723 10.6488 4.06723 10.6488 4.06723C10.8428 4.06723 11 3.90834 11 3.71239V0.357465C11 0.161452 10.8428 0.00262581 10.6488 0.00262581H7.8007C7.78061 0.00163226 7.736 0 7.67025 0C7.17608 0 5.45838 0.0980064 4.10153 1.3591C2.59815 2.7566 2.80713 4.42988 2.85707 4.71999V7.39917H0.351225C0.157208 7.39917 0 7.55799 0 7.75401V11.3623C0 11.5583 0.157208 11.7172 0.351225 11.7172Z" />
+      </symbol>
+      <symbol id="icon-vk" viewBox="0 0 28 15">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M24.098 9.53768C25.0268 10.3961 26.0071 11.2038 26.8401 12.1488C27.2081 12.5687 27.5565 13.002 27.823 13.4894C28.2007 14.1822 27.8586 14.9445 27.2024 14.9859L23.1233 14.9842C22.0712 15.0668 21.2319 14.6658 20.5262 13.9849C19.9615 13.4403 19.4385 12.8608 18.8954 12.2978C18.6728 12.0678 18.4398 11.8513 18.1614 11.6801C17.6045 11.338 17.1212 11.4427 16.803 11.9925C16.4789 12.5517 16.4053 13.1709 16.3735 13.7941C16.3298 14.7034 16.0395 14.9424 15.0746 14.9841C13.0126 15.0761 11.0557 14.7808 9.23773 13.7961C7.63497 12.928 6.3921 11.7025 5.31032 10.3151C3.20406 7.61357 1.59109 4.645 0.141409 1.59327C-0.184902 0.905713 0.053737 0.536635 0.855117 0.523572C2.18584 0.4991 3.51639 0.500842 4.84868 0.521831C5.38952 0.52932 5.74757 0.82298 5.95641 1.30667C6.67637 2.9825 7.55733 4.5769 8.66312 6.05478C8.9576 6.44824 9.25788 6.84171 9.68548 7.11865C10.1585 7.42528 10.5187 7.32365 10.7412 6.82481C10.8824 6.50851 10.9443 6.16782 10.9761 5.82905C11.0815 4.66355 11.0954 3.50006 10.9105 2.33866C10.797 1.61382 10.3657 1.1446 9.60167 1.00743C9.21179 0.9375 9.26984 0.800163 9.45861 0.589498C9.78649 0.226167 10.0949 0 10.7096 0H15.3196C16.0454 0.135596 16.2065 0.444235 16.3059 1.13554L16.3099 5.98311C16.3019 6.25073 16.4511 7.04488 16.9603 7.22202C17.3678 7.34812 17.6364 7.03948 17.881 6.79485C18.9847 5.68588 19.7725 4.37529 20.4763 3.0182C20.7886 2.42148 21.0571 1.80176 21.3174 1.18257C21.5102 0.72309 21.8128 0.49701 22.3595 0.507025L26.7964 0.51077C26.928 0.51077 27.0611 0.512599 27.1885 0.533239C27.9362 0.653855 28.141 0.958315 27.9101 1.64944C27.5463 2.73377 26.8384 3.6374 26.1462 4.5452C25.4063 5.5144 24.6149 6.45042 23.8812 7.42537C23.207 8.31567 23.2605 8.76443 24.098 9.53768Z" />
+      </symbol>
+
+      <symbol id="logo" viewBox="0 0 28 28">
+        <g clip-path="url(#clip0)">
+          <path
+            d="M5.472 14.969a1.269 1.269 0 100-2.538 1.269 1.269 0 000 2.538zM22.133 14.969a1.269 1.269 0 100-2.538 1.269 1.269 0 000 2.538z" />
+          <path
+            d="M14 0A13.973 13.973 0 002.728 5.608H6.699a8.665 8.665 0 004.094-1.105c.396-.208.835-.32 1.283-.328a2.92 2.92 0 012.933 2.852 2.893 2.893 0 01-4.284 2.525 10.63 10.63 0 00-5.008-1.365H4.352a9.62 9.62 0 00-3.343.628 14 14 0 000 10.37 7.465 7.465 0 001.897.26h3.357a8.664 8.664 0 004.093-1.106c.396-.208.836-.32 1.283-.327a2.92 2.92 0 012.947 2.838 2.892 2.892 0 01-4.243 2.592 10.63 10.63 0 00-5.008-1.364H3.97c-.415.002-.83.034-1.241.096A14 14 0 1013.999 0zm8.187 17.18a3.385 3.385 0 01-1.61-.41 12.512 12.512 0 00-5.895-1.637h-1.61c-2.07.05-4.096.612-5.895 1.637a3.397 3.397 0 01-5.008-3.056 3.439 3.439 0 013.48-3.33 3.373 3.373 0 011.5.396 10.192 10.192 0 004.763 1.364h3.957a10.192 10.192 0 004.762-1.364 3.373 3.373 0 011.501-.396 3.439 3.439 0 013.48 3.343 3.396 3.396 0 01-3.398 3.452h-.027z" />
+          <path
+            d="M11.585 21.928a1.078 1.078 0 100-2.156 1.078 1.078 0 000 2.156zM12.008 8.078a1.078 1.078 0 100-2.156 1.078 1.078 0 000 2.156z" />
+        </g>
+        <defs>
+          <clipPath id="clip0">
+            <path d="M0 0h28v28H0z" />
+          </clipPath>
+        </defs>
+      </symbol>
+    </svg>
+  </div>
+
+  <div class="main-container basic-background">
+    <header class="page-header">
+      <p class="page-header__logo">
+        <a class="page-header__logo-link" href="index.html"><svg class="page-header__logo-image" width="28" height="28">
+            <use xlink:href="#logo"></use>
+          </svg>Digital Planet</a>
+      </p>
+      <p class="page-header__logo--mobile" hidden>
+        <a class="page-header__logo-link" href="index.html"><svg class="page-header__logo-image" width="28" height="28">
+            <use xlink:href="#logo"></use>
+          </svg></a>
+      </p>
+
+      <nav class="page-header__navigation">
+        <ul class="page-header__list">
+          <li class="page-header__item">
+            <a class="page-header__link" href="about.html">About</a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__link" href="how_it_works.html">How it works</a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__link" href="technology.html">Technology</a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__link" href="faq.html">FAQ</a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__link page-header__link--active" href="contacts.html">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="page-header__order">
+        <button class="button page-header__button" type="button">
+          Order
+        </button>
+        <p class="page-header__tel">
+          <a class="page-header__link page-header__link-tel" href="tel:+880055535752">8 (800) 555 35 75</a>
+        </p>
+      </div>
+      <button class="page-header__toggle" type="button"><span class="visually-hidden">Menu</span></button>
+    </header>
+    <main class="main-content">
+      <div class="contacts">
+        <div class="contacts__container">
+          <h1 class="contacts__title"><span class="contacts__title--span">Contacts</span></h1>
+
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <p class="contacts__item-text contacts__item-city">Novorossiysk</p>
+              <p class="contacts__item-text"><a class="contacts__item-link" href="tel:+79234650141">+7 (923) 465 – 01
+                  – 41</a>
+              </p>
+              <p class="contacts__item-text"><a class="contacts__item-link"
+                  href="mailto:digitalPlanetNR@mail.ru">digitalPlanetNR@mail.ru</a></p>
+            </li>
+            <li class="contacts__item">
+              <p class="contacts__item-text contacts__item-city">Moscow</p>
+              <p class="contacts__item-text"><a class="contacts__item-link" href="tel:+74958552419">+7 (495) 855 – 24
+                  – 19</a>
+              </p>
+              <p class="contacts__item-text"><a class="contacts__item-link"
+                  href="mailto:digitalPlanetMoscow@mail.ru">digitalPlanetMoscow@mail.ru</a></p>
+            </li>
+            <li class="contacts__item">
+              <p class="contacts__item-text contacts__item-city">Saratov</p>
+              <p class="contacts__item-text"><a class="contacts__item-link" href="tel:+79422212178">+7 (942) 221 – 21
+                  – 78</a>
+              </p>
+              <p class="contacts__item-text"><a class="contacts__item-link"
+                  href="mailto:digitalPlanetSaratov@mail.ru">digitalPlanetSaratov@mail.ru</a></p>
+            </li>
+          </ul>
+
+          <div class="contacts__form">
+            <form action="/" method="POST">
+              <p class="contacts__form-title">Any questions?</p>
+              <p class="contacts__form-text">We will contact with you within two days.</p>
+
+              <div class="contacts__form-container">
+                <div class="contacts__form-field form-field">
+                  <label for="name" class="visually-hidden">Name</label>
+                  <input id="name" type="text" name="name" placeholder="Your name" required>
+                </div>
+
+                <div class="contacts__form-field form-field">
+                  <input id="mail" type="email" name="mail" placeholder="Your e-mail"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                  <label for="mail" class="visually-hidden">E-mail</label>
+                </div>
+
+                <div class="contacts__form-textarea">
+                  <label for="question" class="visually-hidden">What are you interested in?</label>
+                  <textarea id="question" name="question" placeholder="What are you interested in?" required></textarea>
+                </div>
+                <button class="button contacts__form-button" type="submit">Send</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="page-footer">
+      <p class="page-footer__text">© Digital Planet, 2019</p>
+      <p class="page-footer__text page-footer__text--center">All rights reserved</p>
+      <ul class="page-footer__social">
+        <li class="page-footer__social-item">
+          <a class="page-footer__social-link page-footer__social-link--fb" href="#"><svg
+              class="page-footer__social-image" width="8" height="17">
+              <use xlink:href="#icon-fb"></use>
+            </svg></a>
+        </li>
+        <li class="page-footer__social-item">
+          <a class="page-footer__social-link page-footer__social-link--vk" href="#"><svg
+              class="page-footer__social-image" width="21" height="11">
+              <use xlink:href="#icon-vk"></use>
+            </svg></a>
+        </li>
+      </ul>
+    </footer>
+  </div>
+</body>
+
+</html>
