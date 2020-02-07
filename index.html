@@ -42,46 +42,92 @@
 
   <div class="main-container main-background">
     <header class="page-header">
-      <p class="page-header__logo">
-        <a class="page-header__logo-link"><svg class="page-header__logo-image" width="28" height="28">
-            <use xlink:href="#logo"></use>
-          </svg>Digital Planet</a>
-      </p>
-      <p class="page-header__logo--mobile" hidden>
-        <a class="page-header__logo-link"><svg class="page-header__logo-image" width="28" height="28">
-            <use xlink:href="#logo"></use>
-          </svg></a>
-      </p>
+      <div class="page-header__container">
 
-      <nav class="page-header__navigation">
-        <ul class="page-header__list">
-          <li class="page-header__item">
-            <a class="page-header__link" href="about.html">About</a>
-          </li>
-          <li class="page-header__item">
-            <a class="page-header__link" href="how_it_works.html">How it works</a>
-          </li>
-          <li class="page-header__item">
-            <a class="page-header__link" href="technology.html">Technology</a>
-          </li>
-          <li class="page-header__item">
-            <a class="page-header__link" href="faq.html">FAQ</a>
-          </li>
-          <li class="page-header__item">
-            <a class="page-header__link" href="contacts.html">Contacts</a>
-          </li>
-        </ul>
-      </nav>
+        <p class="page-header__logo">
+          <a class="page-header__logo-link" href="index.html"><svg class="page-header__logo-image" width="28"
+              height="28">
+              <use xlink:href="#logo"></use>
+            </svg>Digital Planet</a>
+        </p>
+        <p class="page-header__logo--mobile" hidden>
+          <a class="page-header__logo-link" href="index.html"><svg class="page-header__logo-image" width="28"
+              height="28">
+              <use xlink:href="#logo"></use>
+            </svg></a>
+        </p>
 
-      <div class="page-header__order">
-        <button class="button page-header__button" type="button">
-          Order
-        </button>
-        <p class="page-header__tel">
+        <nav class="page-header__navigation">
+          <ul class="page-header__list">
+            <li class="page-header__item">
+              <a class="page-header__link" href="about.html">About</a>
+            </li>
+            <li class="page-header__item">
+              <a class="page-header__link" href="how_it_works.html">How it works</a>
+            </li>
+            <li class="page-header__item">
+              <a class="page-header__link" href="technology.html">Technology</a>
+            </li>
+            <li class="page-header__item">
+              <a class="page-header__link" href="faq.html">FAQ</a>
+            </li>
+            <li class="page-header__item">
+              <a class="page-header__link" href="contacts.html">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="page-header__order">
+          <button class="button page-header__button" type="button">
+            Order
+          </button>
+          <p class="page-header__tel">
+            <a class="page-header__link page-header__link-tel" href="tel:+880055535752">8 (800) 555 35 75</a>
+          </p>
+        </div>
+        <button class="page-header__toggle" type="button"><span class="visually-hidden">Menu</span></button>
+
+      </div>
+      <div class="page-header__container--mibile" hidden>
+        <nav class="page-header__navigation--mobile">
+          <ul class="page-header__list">
+            <li class="page-header__item">
+              <a class="page-header__link" href="about.html">About</a>
+            </li>
+            <li class="page-header__item">
+              <a class="page-header__link" href="how_it_works.html">How it works</a>
+            </li>
+            <li class="page-header__item">
+              <a class="page-header__link" href="technology.html">Technology</a>
+            </li>
+            <li class="page-header__item">
+              <a class="page-header__link" href="faq.html">FAQ</a>
+            </li>
+            <li class="page-header__item">
+              <a class="page-header__link" href="contacts.html">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <p class="page-header__tel page-header__tel--mobile">
           <a class="page-header__link page-header__link-tel" href="tel:+880055535752">8 (800) 555 35 75</a>
         </p>
+
+        <ul class="page-footer__social page-footer__social--mobile">
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link page-footer__social-link--fb" href="#"><svg
+                class="page-footer__social-image" width="11" height="22">
+                <use xlink:href="#icon-fb"></use>
+              </svg></a>
+          </li>
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link page-footer__social-link--vk" href="#"><svg
+                class="page-footer__social-image" width="28" height="15">
+                <use xlink:href="#icon-vk"></use>
+              </svg></a>
+          </li>
+        </ul>
+
       </div>
-      <button class="page-header__toggle" type="button"><span class="visually-hidden">Menu</span></button>
     </header>
     <main class="main-content main-content--intro">
       <div class="intro">
@@ -122,6 +168,8 @@
     </main>
 
   </div>
+
+  <script src="index.js"></script>
 </body>
 
 </html>
