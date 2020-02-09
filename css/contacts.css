@@ -1,18 +1,4 @@
-.basic-background {
-  background-color: #02050c;
-  background-image: url("../img/body-background@1x.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 40%;
-  background-attachment: fixed;
-  overflow: auto;
-}
 
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .basic-background {
-    background-image: url("../img/body-background@2x.jpg");
-  }
-}
 
 .contacts__item {
   margin-bottom: 1.7em;
@@ -63,14 +49,6 @@
   padding-left: 20%;
   grid-column: 1/3;
   grid-row: 1/2;
-  font-weight: 500;
-  font-size: 2.6em;
-  line-height: 1.4;
-  margin-bottom: 1.1em;
-}
-.contacts__title--span {
-  padding-right: 0.8em;
-  border-bottom: solid 3px #0dd1a2;
 }
 
 .contacts__list {
@@ -113,12 +91,7 @@
     padding: 0;
     margin-bottom: 2em;
   }
-  .contacts__title--span {
-    border: 0;
-  }
-  .contacts__title {
-    border-bottom: solid 3px #0dd1a2;
-  }
+  
   .page-footer__text:not(:last-of-type) {
     margin-bottom: 0;
   }
