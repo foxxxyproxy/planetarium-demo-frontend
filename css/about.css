@@ -3,6 +3,7 @@
     margin: 0 auto;
     max-width:1200px;
     padding-top: 3%;
+    height:75%;
 }
 
 .about__container{
@@ -23,6 +24,64 @@
 }
 
 
+.about__slider__wrapper {
+  display: grid;
+  grid-template-columns: 562px 562px 562px;
+  -ms-scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  
+}
+
+.slider{
+  position: relative;
+  z-index: 1;
+}
+
+.slider::before{
+  content:"";
+  position: absolute;
+  z-index: -1;
+  top:0;
+  right:0;
+  width:93%;
+  height:85%;
+  background-color: transparent;
+
+  outline: 4px solid var(--brand-color-light);
+  outline-offset: 15px;
+
+}
+
+.slider::after{
+  content:"What you can see";
+  position: absolute;
+  z-index: 3;
+  bottom:1em;
+  left:-7em;
+  font-weight: 500;
+  font-size: 1.4rem;
+  text-align: right;
+  line-height: 1.2;
+  width:8em;
+
+}
+
+.slider__item {
+  scroll-snap-align: start;
+}
+.slider__item img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.about__slider-controls{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
 
 .slider__pagination {
   margin: 0 1.5em 0 0;
