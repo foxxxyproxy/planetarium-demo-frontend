@@ -26,3 +26,17 @@ export class Carousel {
     }
   }
 }
+
+
+const carousel = new Carousel(".about__slider__wrapper");
+
+const btn_prev = document.querySelector(".slider__button--prev");
+const btn_next = document.querySelector(".slider__button--next");
+
+btn_prev.addEventListener("click", () => {
+  carousel.decrementPosition();
+});
+
+btn_next.addEventListener("click", () => {
+  carousel.incrementPosition();
+});
