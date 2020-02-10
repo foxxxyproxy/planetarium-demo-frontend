@@ -7,7 +7,7 @@ export class Carousel {
 
   scroll() {
     this.element.scrollTo(
-      this.position * 562,
+      this.position * 563,
       0
     );
   }
@@ -32,11 +32,15 @@ const carousel = new Carousel(".about__slider__wrapper");
 
 const btn_prev = document.querySelector(".slider__button--prev");
 const btn_next = document.querySelector(".slider__button--next");
+const current = document.querySelector(".slider__pagination-current");
+const total = document.querySelector("slider__pagination-total");
 
 btn_prev.addEventListener("click", () => {
   carousel.decrementPosition();
+  current.innerHTML = carousel.position + 1;
 });
 
 btn_next.addEventListener("click", () => {
   carousel.incrementPosition();
+  current.innerHTML = carousel.position + 1;
 });
