@@ -7,7 +7,7 @@ export class Carousel {
 
   scroll() {
     this.element.scrollTo(
-      this.position * 563,
+      this.position * 562,
       0
     );
   }
