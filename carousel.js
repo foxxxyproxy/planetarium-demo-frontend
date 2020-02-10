@@ -7,7 +7,7 @@ export class Carousel {
 
   scroll() {
     this.element.scrollTo(
-      this.position * document.documentElement.clientWidth,
+      this.position * 562,
       0
     );
   }
