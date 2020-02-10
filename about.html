@@ -8,6 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css" />
   <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/contacts.css" />
+  <link rel="stylesheet" href="./css/about.css" />
 </head>
 
 <body>
@@ -40,7 +42,7 @@
     </svg>
   </div>
 
-  <div class="main-container main-background">
+  <div class="main-container basic-background">
     <header class="page-header">
       <div class="page-header__container">
 
@@ -60,7 +62,7 @@
         <nav class="page-header__navigation">
           <ul class="page-header__list">
             <li class="page-header__item">
-              <a class="page-header__link" href="about.html">About</a>
+              <a class="page-header__link page-header__link--active" href="about.html">About</a>
             </li>
             <li class="page-header__item">
               <a class="page-header__link" href="how_it_works.html">How it works</a>
@@ -72,7 +74,7 @@
               <a class="page-header__link" href="faq.html">FAQ</a>
             </li>
             <li class="page-header__item">
-              <a class="page-header__link" href="contacts.html">Contacts</a>
+              <a class="page-header__link page-header__link" href="contacts.html">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -129,46 +131,69 @@
 
       </div>
     </header>
-    <main class="main-content main-content--intro">
-      <div class="intro">
-        <div class="intro__container">
-          <h1 class="intro__title">Digital Planet VR</h1>
-          <div class="intro__text-wrapper">
-            <p class="intro__text">Educational virtual planetarium in Novorossiysk</p>
-            <p class="intro__text">An exciting adventure into the world of stars and galaxies</p>
-          </div>
-          <div class="intro__button-container">
-            <button class="button intro__button intro__button-order" type="button">Order</button>
-            <a class="button intro__button intro__button-video" href="#">Video</a>
-          </div>
-        </div>
-      </div>
+    <main class="main-content">
+      <div class="about">
 
-      <div class="scroll scroll--intro">
-        <div class="scroll__container">
-          <ul class="page-footer__social">
-            <li class="page-footer__social-item">
-              <a class="page-footer__social-link page-footer__social-link--fb" href="#"><svg
-                  class="page-footer__social-image" width="11" height="22">
-                  <use xlink:href="#icon-fb"></use>
-                </svg></a>
-            </li>
-            <li class="page-footer__social-item">
-              <a class="page-footer__social-link page-footer__social-link--vk" href="#"><svg
-                  class="page-footer__social-image" width="28" height="15">
-                  <use xlink:href="#icon-vk"></use>
-                </svg></a>
-            </li>
-          </ul>
-          <p class="scroll__text">
-            <a class="scroll__link" href="#">Scroll down</a>
-          </p>
+        <h1 class="title about__title"><span class="title--span about__title--span">What is VR-planetarium?</span></h1>
+
+        <div class="about__container">
+          <div class="about__description">
+            <p>This is an educational program using virtual reality technology.</p>
+            <p>Spectators are given virtual reality glasses, the operator starts a planetarium session on all glasses at
+              the same time. The film collection includes educational pictures about space, astronomy and social
+              science.
+            </p>
+            <p>Due to the reality and imitation of the game, such training increases motivation and stimulates the
+              child's active brain activity.</p>
+          </div>
+
+          <div class="about__slider">
+
+            <div class="slider">
+
+              <div class="about__slider__wrapper">
+                <div class="about__slide slider__item">
+                  <img class="about__slide-image" src="img/astronaut-in-outer-space.jpg" width="562"
+                    alt="Astronaut in space">
+                </div>
+                <div class="about__slide slider__item">
+                  <img class="about__slide-image" src="img/astronaut-in-outer-space.jpg" width="562"
+                    alt="Astronaut in space">
+                </div>
+                <div class="about__slide slider__item">
+                  <img class="about__slide-image" src="img/astronaut-in-outer-space.jpg" width="562"
+                    alt="Astronaut in space">
+                </div>
+              </div>
+            </div>
+
+            <div class="about__slider-controls">
+              <div class="slider__pagination">
+                <span class="slider__pagination-current">01</span> / <span class="slider__pagination-total">03</span>
+              </div>
+
+              <div class="slider__buttons">
+                <button class="slider__button slider__button--prev" type="button"><span
+                    class="visually-hidden">Prev</span></button>
+                <button class="slider__button slider__button--next" type="button"><span
+                    class="visually-hidden">Next</span></button>
+              </div>
+            </div>
+
+
+          </div>
         </div>
-      </div>
+
     </main>
 
+    <div class="scroll">
+      <div class="scroll__container">
+        <p class="scroll__text">
+          <a class="scroll__link" href="./contacts.html"><span class="visually-hidden"> Scroll down</span></a>
+        </p>
+      </div>
+    </div>
   </div>
-
   <script type="module" src="index.js"></script>
 </body>
 
