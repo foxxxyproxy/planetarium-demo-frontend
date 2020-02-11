@@ -24,6 +24,7 @@
 
 .slider__item {
   display: flex;
+  position: relative;
 }
 .explanation__column-image {
   width: 100%;
@@ -33,6 +34,7 @@
 .slider__item img {
   max-width: 195px;
 }
+
 .explanation__column-text {
   margin-left: 1.5em;
   font-weight: 300;
@@ -42,14 +44,19 @@
   margin: 0;
   font-size: 1.2em;
 }
+.explanation__slider-controls {
+  display: none;
+}
 
 @media (max-width: 1050px) {
   .slider__item {
     flex-direction: column;
   }
-
   .explanation__column-text {
     margin-left: 0;
+    padding:0.5em;
+    background-color: rgba(28,28,28, 0.7);
+    margin-bottom:1em;
   }
   .explanation__title {
     padding-left: 0;
@@ -61,17 +68,96 @@
     display: grid;
     grid-template-columns: 195px 195px 195px 195px;
     grid-template-rows: auto;
-    grid-gap: 0;
+    grid-gap: 40px;
     -ms-scroll-snap-type: x mandatory;
     scroll-snap-type: x mandatory;
     overflow-x: hidden;
     overflow-y: hidden;
     scroll-behavior: smooth;
+    padding-left: 0.5em;
+
   }
 
   .explanation__slider {
     width: 100%;
     max-width: 195px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
   }
+  .explanation__slider::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    width: 82%;
+    height: 25%;
+    background-color: transparent;
+    outline: 3px solid var(--brand-color-light);
+    outline-offset: 10px;
+  }
+  .explanation__slider-controls {
+    display: flex;
+  }
+}
+
+.explanation__column-image p {
+  position: relative;
+  margin: 0;
+  max-width: 195px;
+  z-index: 1;
+}
+.explanation__column-image p::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  width: 85%;
+  height: 75%;
+  background-color: transparent;
+  outline: 3px solid var(--brand-color-light);
+  outline-offset: 10px;
+}
+
+.slider__item .image-wrapper::before {
+  content: "1";
+  z-index: 1;
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 700;
+  bottom: -0.5em;
+  left: -0.5em;
+  padding: 0.5em;
+  width: 2em;
+  height: 2em;
+  color: var(--brand-color-light);
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.slider__item:nth-of-type(2) .image-wrapper::before {
+  content: "2";
+}
+
+.slider__item:nth-of-type(3) .image-wrapper::before {
+  content: "3";
+}
+
+.slider__item:nth-of-type(4) .image-wrapper::before {
+  content: "4";
+}
+
+.scroll__link::before {
+  align-self: center;
+}
+
+.scroll__container {
+  justify-content: center;
+}
+.scroll__text {
+  position: relative;
+  bottom: 0;
 }

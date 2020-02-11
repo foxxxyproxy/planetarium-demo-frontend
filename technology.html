@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css" />
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="./css/contacts.css" />
-  <link rel="stylesheet" href="./css/explanation.css" />
+  <link rel="stylesheet" href="./css/about.css" />
 </head>
 
 <body>
@@ -57,10 +57,10 @@
               <a class="page-header__link" href="about.html">About</a>
             </li>
             <li class="page-header__item">
-              <a class="page-header__link page-header__link--active" href="how_it_works.html">How it works</a>
+              <a class="page-header__link" href="how_it_works.html">How it works</a>
             </li>
             <li class="page-header__item">
-              <a class="page-header__link" href="technology.html">Technology</a>
+              <a class="page-header__link page-header__link--active" href="technology.html">Technology</a>
             </li>
             <li class="page-header__item">
               <a class="page-header__link" href="faq.html">FAQ</a>
@@ -126,71 +126,45 @@
 
       </div>
     </header>
-
-
     <main class="main-content">
-      <div class="explanation">
+      <div class="about">
 
-        <h1 class="title explanation__title"><span class="title--span explanation__title--span">How it works</span></h1>
+        <h1 class="title about__title"><span class="title--span about__title--span">What is VR-planetarium?</span></h1>
 
-        <div class="explanation__container">
+        <div class="about__container">
+          <div class="about__description">
+            <p>This is an educational program using virtual reality technology.</p>
+            <p>Spectators are given virtual reality glasses, the operator starts a planetarium session on all glasses at
+              the same time. The film collection includes educational pictures about space, astronomy and social
+              science.
+            </p>
+            <p>Due to the reality and imitation of the game, such training increases motivation and stimulates the
+              child's active brain activity.</p>
+          </div>
 
-          <div class="explanation__slider">
+          <div class="about__slider">
+
             <div class="slider">
-              <div class="explanation__slider__wrapper">
-                <div class="explanation__slide slider__item">
-                  <div class="explanation__column-image">
-                    <p class="image-wrapper"><img class="explanation__slide-image" src="img/explanation-bg-1.jpg"
-                        width="195" alt="Prepare inventory"></p>
-                  </div>
-                  <div class="explanation__column-text">
-                    <h2 class="explanation__item-title">Prepare inventory</h2>
-                    <p class="explanation__item-text">Our experts prepare each VR glasses for use, treating the devices
-                      with a special care product after each session.</p>
-                  </div>
+
+              <div class="about__slider__wrapper">
+                <div class="about__slide slider__item">
+                  <img class="about__slide-image" src="img/astronaut-in-outer-space.jpg" width="562"
+                    alt="Astronaut in space">
                 </div>
-                <div class="explanation__slide slider__item">
-                  <div class="explanation__column-image">
-                    <p class="image-wrapper"><img class="explanation__slide-image" src="img/explanation-bg-2.jpg"
-                        width="195" alt="Choose a movie"></p>
-                  </div>
-                  <div class="explanation__column-text">
-                    <h2 class="explanation__item-title">Choose a movie</h2>
-                    <p class="explanation__item-text">In our archive there are educational films on the subject of
-                      space, astrology and social science. We work with the largest manufacturer of multimedia products
-                      in the Russian Federation.</p>
-                  </div>
+                <div class="about__slide slider__item">
+                  <img class="about__slide-image" src="img/astronaut-in-outer-space.jpg" width="562"
+                    alt="Astronaut in space">
                 </div>
-                <div class="explanation__slide slider__item">
-                  <div class="explanation__column-image">
-                    <p class="image-wrapper"><img class="explanation__slide-image" src="img/explanation-bg-3.jpg"
-                        width="195" alt="put on VR glasses"></p>
-                  </div>
-                  <div class="explanation__column-text">
-                    <h2 class="explanation__item-title">Put on VR glasses</h2>
-                    <p class="explanation__item-text">Pupils get VR glasses, our technician helps them figure out how to
-                      put on glasses correctly and fix them on their heads. For children with vision other than 100%,
-                      the technician adjusts the diopter.</p>
-                  </div>
-                </div>
-                <div class="explanation__slide slider__item">
-                  <div class="explanation__column-image">
-                    <p class="image-wrapper"><img class="explanation__slide-image" src="img/explanation-bg-4.jpg"
-                        width="195" alt="Explore the galaxies"></p>
-                  </div>
-                  <div class="explanation__column-text">
-                    <h2 class="explanation__item-title">Explore the galaxies</h2>
-                    <p class="explanation__item-text">Children plunge into virtual worlds and enjoy learning everything
-                      around. After the show, vivid emotions remain and important moments about planets, stars and
-                      galaxies are remembered.</p>
-                  </div>
+                <div class="about__slide slider__item">
+                  <img class="about__slide-image" src="img/astronaut-in-outer-space.jpg" width="562"
+                    alt="Astronaut in space">
                 </div>
               </div>
             </div>
 
-            <div class="slider-controls explanation__slider-controls">
+            <div class="slider-controls about__slider-controls">
               <div class="slider__pagination">
-                <span class="slider__pagination-current">1</span> / <span class="slider__pagination-total">4</span>
+                <span class="slider__pagination-current">1</span> / <span class="slider__pagination-total">3</span>
               </div>
 
               <div class="slider__buttons">
@@ -216,7 +190,7 @@
     </div>
   </div>
   <script type="module" src="./js/index.js"></script>
-  <script type="module" src="./js/explanation.js"></script>
+  <script type="module" src="./js/about.js"></script>
 </body>
 
 </html>

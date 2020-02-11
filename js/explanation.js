@@ -1,6 +1,6 @@
 import {Carousel} from "./carousel.js"
 
-const carousel = new Carousel(".about__slider__wrapper", 562);
+const carousel = new Carousel(".explanation__slider__wrapper", 235);
 
 const btn_prev = document.querySelector(".slider__button--prev");
 const btn_next = document.querySelector(".slider__button--next");
