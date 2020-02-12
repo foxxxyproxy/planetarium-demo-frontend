@@ -79,7 +79,7 @@
         </nav>
 
         <div class="page-header__order">
-          <button class="button page-header__button" type="button">
+          <button class="button page-header__button button-order" type="button">
             Order
           </button>
           <p class="page-header__tel">
@@ -216,6 +216,30 @@
       </ul>
     </footer>
   </div>
+
+  <div class="popup">
+    <div class="popup__wrapper"></div>
+    <form class="popup__form" action="/" method="POST">
+      <button class="popup__close-button popup__close-button--order" type="button"><span
+          class="visually-hidden">Close</span></button>
+      <h2 class="popup__title">Order the VR Planetarium</h2>
+      <p class="popup__text">Share your contacts, and we will call you back within two days</p>
+      <div class="popup__input form-field">
+        <label for="popup-name" class="visually-hidden">Name</label>
+        <input id="popup-name" type="text" name="user-name" autocomplete="on" autofocus placeholder="Your name"
+          required>
+      </div>
+
+      <div class="popup__input form-field">
+        <label for="popup-phone" class="visually-hidden">Phone number</label>
+        <input id="popup-phone" type="tel" name="user-phone" autocomplete="on"
+          placeholder="Your phone number | example: 322-22332" pattern="[0-9]{3}-[0-9]{5}" required>
+      </div>
+
+      <div class="button__wrapper"><button class="button popup__send-button" type="submit">Sent</button></div>
+    </form>
+  </div>
+
   <script type="module" src="./js/index.js"></script>
 </body>
 
