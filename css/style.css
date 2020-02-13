@@ -269,7 +269,6 @@
 .page-header__toggle {
   position: relative;
   display: block;
-  padding: 10px;
   border: 0;
   background-color: transparent;
   cursor: pointer;
@@ -278,14 +277,14 @@
 .page-header__toggle::before {
   content: "";
   position: absolute;
-  background-position: 0 0;
+  background-position: center;
   top: 0px;
   right: 0;
   background-image: url("../img/open-button.svg");
   background-repeat: no-repeat;
   background-size: 24px 19px;
-  width: 24px;
-  height: 19px;
+  width: 30px;
+  height: 30px;
 }
 
 .page-header__toggle {
@@ -305,8 +304,9 @@
   background-image: url("../img/close-button.svg");
   background-repeat: no-repeat;
   background-size: 19px 19px;
-  width: 19px;
-  height: 19px;
+  background-position: center;
+  width: 30px;
+  height: 30px;
 }
 
 .page-header--open {
@@ -697,7 +697,7 @@
   justify-content: space-between;
   overflow: auto;
   transform: translateX(-280px);
-  transition: transform 200ms;
+  transition: transform 300ms;
 }
 
 .form--show {
@@ -744,8 +744,8 @@
   top: 1rem;
   right: 1rem;
   background-color: transparent;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   border: 0;
   cursor: pointer;
   transition: opacity 160ms;
@@ -779,7 +779,7 @@
 @media (max-width: 767px) {
   .popup__form {
     position: fixed;
-    max-width: 100%;
+    max-width: 90%;
     max-height: 100%;
     width: 100%;
     min-height: 100%;
@@ -787,7 +787,6 @@
     background-color: #f3f3f3;
     top: 0;
     left: 0;
-    //transform: translateX(-50%);
     padding: 2em;
     justify-content: center;
   }
