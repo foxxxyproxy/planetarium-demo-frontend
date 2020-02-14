@@ -5,6 +5,8 @@ const close_btn = document.querySelector(".popup__close-button");
 const popup = document.querySelector(".popup");
 const input_name = document.querySelector("#popup-name");
 const form = document.querySelector(".popup__form");
+const success_msg = document.querySelector(".popup__form-message");
+const saccess_btn = document.querySelector(".popup__saccess-button");
 
 order_btn.forEach(btn => btn.addEventListener("click", () => {
     popup.classList.toggle("popup--show");
@@ -19,7 +21,17 @@ close_btn.addEventListener("click", () => {
 
 form.addEventListener("submit", event => {
     event.preventDefault();
+    popup.classList.toggle("popup--send");
+    success_msg.removeAttribute("hidden");
+    saccess_btn.removeAttribute("hidden");
+});
+
+saccess_btn.addEventListener("click", () => {
+    event.preventDefault();
     close_btn.dispatchEvent(new Event("click"));
+    success_msg.setAttribute("hidden", "hidden");
+    saccess_btn.setAttribute("hidden", "hidden");
+    popup.classList.remove("popup--send");
 });
 
 menuButton.addEventListener("click", event =>{
