@@ -8,8 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css" />
   <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/contacts.css" />
-  <link rel="stylesheet" href="./css/about.css" />
+  <link rel="stylesheet" href="./css/explanation.css" />
 </head>
 
 <body>
@@ -31,6 +30,8 @@
           </clipPath>
         </defs>
       </symbol>
+      <symbol id="icon-magnifier" viewBox="0 0 40 40">
+          <path d="M39.5815 37.6282L27.7637 25.8104C32.9257 19.6717 32.6467 10.3939 26.8568 4.60402C20.7181 -1.53467 10.7427 -1.53467 4.60402 4.60402C-1.53467 10.7427 -1.53467 20.7181 4.60402 26.8568C7.67337 29.8564 11.7193 31.3911 15.6955 31.3911C19.2532 31.3911 22.8806 30.1354 25.7407 27.7637L37.5585 39.5815C37.9073 39.8605 38.2561 40 38.6048 40C38.9536 40 39.3024 39.8605 39.5815 39.5815C40.1395 39.0234 40.1395 38.1863 39.5815 37.6282ZM24.8338 24.8338C19.8113 29.8564 11.5798 29.8564 6.55725 24.8338C1.53467 19.8113 1.53467 11.5798 6.55725 6.55725C9.06853 4.04596 12.4169 2.79032 15.6955 2.79032C18.9742 2.79032 22.3225 4.04596 24.8338 6.55725C29.8564 11.5798 29.8564 19.8113 24.8338 24.8338ZM24.0665 15.6955C24.0665 16.4629 23.4387 17.0907 22.6713 17.0907H17.0907V22.6713C17.0907 23.4387 16.4629 24.0665 15.6955 24.0665C14.9282 24.0665 14.3004 23.4387 14.3004 22.6713V17.0907H8.71974C7.9524 17.0907 7.32458 16.4629 7.32458 15.6955C7.32458 14.9282 7.9524 14.3004 8.71974 14.3004H14.3004V8.71974C14.3004 7.9524 14.9282 7.32458 15.6955 7.32458C16.4629 7.32458 17.0907 7.9524 17.0907 8.71974V14.3004H22.6713C23.4387 14.3004 24.0665 14.9282 24.0665 15.6955Z" fill="white"/></symbol>
     </svg>
   </div>
 
@@ -126,45 +127,70 @@
 
       </div>
     </header>
+
+
     <main class="main-content">
-      <div class="about">
+      <div class="technology">
 
-        <h1 class="title about__title"><span class="title--span about__title--span">What is VR-planetarium?</span></h1>
+        <h1 class="title technology__title"><span class="title--span technology__title--span">VR-technology</span></h1>
 
-        <div class="about__container">
-          <div class="about__description">
-            <p>This is an educational program using virtual reality technology.</p>
-            <p>Spectators are given virtual reality glasses, the operator starts a planetarium session on all glasses at
-              the same time. The film collection includes educational pictures about space, astronomy and social
-              science.
-            </p>
-            <p>Due to the reality and imitation of the game, such training increases motivation and stimulates the
-              child's active brain activity.</p>
-          </div>
+        <figure class="technology__image-container">
+            <img class="technology__image" src="img/VR-glasses.png" width="428" height="220" alt="VR-glasses">
+            <button class="button technology__button" type="button"><svg class="technology__button-image" width="40" height="40"><use xlink:href="#icon-magnifier"></use></svg><span class="visually-hidden">Increase</span></button>
+        </figure>
 
-          <div class="about__slider">
-
+        <div class="technology__container">
+          <div class="technology__slider">
             <div class="slider">
 
-              <div class="about__slider__wrapper">
-                <div class="about__slide slider__item">
-                  <img class="about__slide-image" src="img/astronaut-in-outer-space.jpg" width="562"
-                    alt="Astronaut in space">
+              <div class="technology__slider__wrapper">
+
+                <div class="technology__slide slider__item">
+                  <div class="technology__column-image">
+                    <p class="image-wrapper"><img class="technology__slide-image" src="img/VR-glasses.png" width="400" alt="VR-glasses"></p>
+                  </div>
+                  <div class="technology__column-text">
+                    <h2 class="technology__item-title">Masters Glass VR-iii</h2>
+                    <p class="technology__item-text">We use only original imported VR glasses. The technology is tested and safe for the eyes. Stress during viewing - as when walking due to high-quality volumetric image.</p>
+                  </div>
                 </div>
-                <div class="about__slide slider__item">
-                  <img class="about__slide-image" src="img/astronaut-in-outer-space.jpg" width="562"
-                    alt="Astronaut in space">
+
+                <div class="technology__slide slider__item">
+                    <div class="technology__column-image">
+                      <p class="image-wrapper"><img class="technology__slide-image" src="img/VR-glasses.png" width="400" alt="VR-glasses"></p>
+                    </div>
+                    <div class="technology__column-text">
+                      <h2 class="technology__item-title">Security</h2>
+                      <p class="technology__item-text">The viewer is always located in the center of the hall, and is clearly fixed in space, which makes viewing clear and comfortable. Virtual reality technology does not spoil vision, and the presence effect develops creativity and spatial thinking.</p>
+                    </div>
                 </div>
-                <div class="about__slide slider__item">
-                  <img class="about__slide-image" src="img/astronaut-in-outer-space.jpg" width="562"
-                    alt="Astronaut in space">
+
+                <div class="technology__slide slider__item">
+                    <div class="technology__column-image">
+                      <p class="image-wrapper"><img class="technology__slide-image" src="img/VR-glasses.png" width="400" alt="VR-glasses"></p>
+                    </div>
+                    <div class="technology__column-text">
+                      <h2 class="technology__item-title">Equipment</h2>
+                      <p class="technology__item-text">All films are played using the built-in glasses screens of mobile phones from leading brands. Our technicians will bring all the equipment with them: you only need a room for the lesson.</p>
+                    </div>
                 </div>
+
+                <div class="technology__slide slider__item">
+                    <div class="technology__column-image">
+                      <p class="image-wrapper"><img class="technology__slide-image" src="img/VR-glasses.png" width="400" alt="VR-glasses"></p>
+                    </div>
+                    <div class="technology__column-text">
+                      <h2 class="technology__item-title">Fastening system</h2>
+                      <p class="technology__item-text">Suitable for any head size, even for a first grader. During viewing, it will not work to harm the child’s head due to the carefully designed design of the glasses.</p>
+                    </div>
+                </div>
+                
               </div>
             </div>
 
-            <div class="slider-controls about__slider-controls">
+            <div class="slider-controls technology__slider-controls">
               <div class="slider__pagination">
-                <span class="slider__pagination-current">1</span> / <span class="slider__pagination-total">3</span>
+                <span class="slider__pagination-current">1</span> / <span class="slider__pagination-total">4</span>
               </div>
 
               <div class="slider__buttons">
@@ -190,7 +216,7 @@
     </div>
   </div>
   <script type="module" src="./js/index.js"></script>
-  <script type="module" src="./js/about.js"></script>
+  
 </body>
 
 </html>

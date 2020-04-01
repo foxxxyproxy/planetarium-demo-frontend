@@ -1,21 +1,25 @@
-.explanation {
+.explanation,
+.technology {
   width: 95%;
   margin: 0 auto;
   max-width: 1200px;
 }
 
-.explanation__container {
+.explanation__container,
+.technology__container {
   width: 90%;
   margin: 0 auto;
 }
 
-.explanation__slider__wrapper {
+.explanation__slider__wrapper,
+.technology__slider__wrapper {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
   grid-gap: 2em;
 }
-.explanation__slider {
+.explanation__slider,
+.technology__slide {
   height: 100%;
 }
 .slider {
@@ -26,25 +30,30 @@
   display: flex;
   position: relative;
 }
-.explanation__column-image {
+.explanation__column-image,
+.technology__column-image {
   width: 100%;
   margin-bottom: 1em;
 }
 
-.slider__item img {
+.explanation .slider__item img {
   max-width: 195px;
 }
 
-.explanation__column-text {
+.explanation__column-text,
+.technology__column-text {
   margin-left: 1.5em;
   font-weight: 300;
   line-height: 1.3;
+  font-size: 0.88rem;
 }
-.explanation__item-title {
+.explanation__item-title,
+.technology__item-title {
   margin: 0;
   font-size: 1.2em;
 }
-.explanation__slider-controls {
+.explanation__slider-controls,
+.technology__slider-controls {
   display: none;
 }
 
@@ -52,13 +61,15 @@
   .slider__item {
     flex-direction: column;
   }
-  .explanation__column-text {
+  .explanation__column-text,
+  .technology__column-text {
     margin-left: 0;
-    padding:0.5em;
-    background-color: rgba(28,28,28, 0.7);
-    margin-bottom:1em;
+    padding: 0.5em;
+    background-color: rgba(28, 28, 28, 0.7);
+    margin-bottom: 1em;
   }
-  .explanation__title {
+  .explanation__title,
+  .technology__title {
     padding-left: 0;
   }
 }
@@ -75,7 +86,6 @@
     overflow-y: hidden;
     scroll-behavior: smooth;
     padding-left: 0.5em;
-
   }
 
   .explanation__slider {
@@ -121,7 +131,7 @@
   outline-offset: 10px;
 }
 
-.slider__item .image-wrapper::before {
+.explanation .slider__item .image-wrapper::before {
   content: "1";
   z-index: 1;
   position: absolute;
@@ -138,15 +148,15 @@
   background-color: #ffffff;
 }
 
-.slider__item:nth-of-type(2) .image-wrapper::before {
+.explanation .slider__item:nth-of-type(2) .image-wrapper::before {
   content: "2";
 }
 
-.slider__item:nth-of-type(3) .image-wrapper::before {
+.explanation .slider__item:nth-of-type(3) .image-wrapper::before {
   content: "3";
 }
 
-.slider__item:nth-of-type(4) .image-wrapper::before {
+.explanation .slider__item:nth-of-type(4) .image-wrapper::before {
   content: "4";
 }
 
@@ -160,4 +170,204 @@
 .scroll__text {
   position: relative;
   bottom: 0;
+}
+
+.technology__slider__wrapper {
+  grid-gap: 4em;
+  grid-column-gap: 480px;
+}
+
+.technology__image-container {
+  position: absolute;
+  margin: 0;
+  width: 400px;
+  height: 400px;
+  top: 250px;
+  left: calc(50% - 200px);
+  z-index: 2;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.technology__image-container::before {
+  content: "";
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  top: -40px;
+  left: -40px;
+}
+
+.technology__image {
+  position: absolute;
+  top: 100px;
+  left: 10px;
+}
+
+.technology__button {
+  position: absolute;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  border: 0;
+  background-color: var(--brand-color);
+  bottom: 1em;
+  right: 2em;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.technology__button:hover {
+  background-color: var(--brand-color-light);
+}
+
+.technology__button-image {
+  position: absolute;
+  top: 25px;
+  left: 26px;
+  fill: #ffffff;
+}
+
+.technology__column-image {
+  display: none;
+}
+
+@media (max-width: 1050px) {
+  .technology__image-container {
+    display: none;
+  }
+
+  .technology__column-image {
+    display: block;
+  }
+
+  .technology__slider__wrapper {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 420px 420px 420px 420px;
+    grid-template-rows: auto;
+    grid-gap: 40px;
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+  }
+
+  .technology__slider {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .technology__slider-controls {
+    display: flex;
+  }
+}
+
+.technology__column-image {
+  width: 420px;
+  height: 420px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.technology__column-image p {
+  position: relative;
+  z-index: 1;
+  top: 25%;
+  right: -25px;
+}
+
+.technology__column-image p::after,
+.technology__column-image p::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.technology__column-image p::before {
+  border: 1.5px solid #0dd1a2;
+  width: 24px;
+  height: 24px;
+  z-index: 20;
+  top: 20px;
+  left: 30px;
+}
+
+.technology__column-image p::after {
+  width: 12px;
+  height: 12px;
+  background-color: #0dd1a2;
+  z-index: 21;
+  top: 26px;
+  left: 36px;
+}
+
+.technology__slide {
+  position: relative;
+}
+
+.technology__slide:nth-child(2n) {
+  padding-left: 5%;
+}
+
+.technology__slide:nth-child(1)::before,
+.technology__slide:nth-child(2)::before,
+.technology__slide:nth-child(3)::before,
+.technology__slide:nth-child(4)::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/pointer 1.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 65%;
+  height: 120px;
+  top: 10px;
+  left: 210px;
+  z-index: 30;
+}
+
+.technology__slide:nth-child(2)::before {
+  background-image: url("../img/pointer 2.svg");
+  width: 75%;
+  height: 95px;
+  top: 10px;
+  left: -70%;
+}
+
+.technology__slide:nth-child(3)::before {
+  background-image: url("../img/pointer 3.svg");
+  width: 150%;
+  height: 85px;
+  top: -70px;
+  left: 150px;
+}
+
+.technology__slide:nth-child(4)::before {
+  background-image: url("../img/pointer 4.svg");
+
+  width: 100px;
+  height: 80px;
+  top: -70px;
+  left: -75px;
+}
+
+@media (max-width: 1050px) {
+  .technology__slide:nth-child(1)::before,
+  .technology__slide:nth-child(2)::before,
+  .technology__slide:nth-child(3)::before,
+  .technology__slide:nth-child(4)::before {
+    display: none;
+  }
+
+  .technology__slide:nth-child(2n) {
+    padding-left: 0;
+  }
 }
