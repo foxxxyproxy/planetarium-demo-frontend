@@ -8,7 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css" />
   <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/explanation.css" />
 </head>
 
 <body>
@@ -136,7 +135,8 @@
 
         <figure class="technology__image-container">
             <img class="technology__image" src="img/VR-glasses.png" width="428" height="220" alt="VR-glasses">
-            <button class="button technology__button" type="button"><svg class="technology__button-image" width="40" height="40"><use xlink:href="#icon-magnifier"></use></svg><span class="visually-hidden">Increase</span></button>
+            <button class="button technology__button" type="button"><svg class="technology__button-image" width="40" height="40">
+              <use xlink:href="#icon-magnifier"></use></svg><span class="visually-hidden">Zoom</span></button>
         </figure>
 
         <div class="technology__container">
@@ -147,41 +147,46 @@
 
                 <div class="technology__slide slider__item">
                   <div class="technology__column-image">
-                    <p class="image-wrapper"><img class="technology__slide-image" src="img/VR-glasses.png" width="400" alt="VR-glasses"></p>
+                    <p class="technology__column__image-wrapper"><img class="technology__slide-image" src="img/VR-glasses.png" width="400" alt="VR-glasses"></p>
                   </div>
                   <div class="technology__column-text">
                     <h2 class="technology__item-title">Masters Glass VR-iii</h2>
-                    <p class="technology__item-text">We use only original imported VR glasses. The technology is tested and safe for the eyes. Stress during viewing - as when walking due to high-quality volumetric image.</p>
+                    <p class="technology__item-text">We use only original imported VR glasses. The technology is tested and safe for the eyes. 
+                      Stress during viewing - as when walking due to high-quality volumetric image.</p>
                   </div>
                 </div>
 
                 <div class="technology__slide slider__item">
                     <div class="technology__column-image">
-                      <p class="image-wrapper"><img class="technology__slide-image" src="img/VR-glasses.png" width="400" alt="VR-glasses"></p>
+                      <p class="technology__column__image-wrapper"><img class="technology__slide-image" src="img/VR-glasses.png" width="400" alt="VR-glasses"></p>
                     </div>
                     <div class="technology__column-text">
                       <h2 class="technology__item-title">Security</h2>
-                      <p class="technology__item-text">The viewer is always located in the center of the hall, and is clearly fixed in space, which makes viewing clear and comfortable. Virtual reality technology does not spoil vision, and the presence effect develops creativity and spatial thinking.</p>
+                      <p class="technology__item-text">The viewer is always located in the center of the hall, and is clearly fixed in space, 
+                        which makes viewing clear and comfortable. Virtual reality technology does not spoil vision, and the presence effect develops 
+                        creativity and spatial thinking.</p>
                     </div>
                 </div>
 
                 <div class="technology__slide slider__item">
                     <div class="technology__column-image">
-                      <p class="image-wrapper"><img class="technology__slide-image" src="img/VR-glasses.png" width="400" alt="VR-glasses"></p>
+                      <p class="technology__column__image-wrapper"><img class="technology__slide-image" src="img/VR-glasses.png" width="400" alt="VR-glasses"></p>
                     </div>
                     <div class="technology__column-text">
                       <h2 class="technology__item-title">Equipment</h2>
-                      <p class="technology__item-text">All films are played using the built-in glasses screens of mobile phones from leading brands. Our technicians will bring all the equipment with them: you only need a room for the lesson.</p>
+                      <p class="technology__item-text">All films are played using the built-in glasses screens of mobile phones from leading brands. 
+                        Our technicians will bring all the equipment with them: you only need a room for the lesson.</p>
                     </div>
                 </div>
 
                 <div class="technology__slide slider__item">
                     <div class="technology__column-image">
-                      <p class="image-wrapper"><img class="technology__slide-image" src="img/VR-glasses.png" width="400" alt="VR-glasses"></p>
+                      <p class="technology__column__image-wrapper"><img class="technology__slide-image" src="img/VR-glasses.png" width="400" alt="VR-glasses"></p>
                     </div>
                     <div class="technology__column-text">
                       <h2 class="technology__item-title">Fastening system</h2>
-                      <p class="technology__item-text">Suitable for any head size, even for a first grader. During viewing, it will not work to harm the child’s head due to the carefully designed design of the glasses.</p>
+                      <p class="technology__item-text">Suitable for any head size, even for a first grader. During viewing, it will not work to harm the 
+                        child’s head due to the carefully designed design of the glasses.</p>
                     </div>
                 </div>
                 
@@ -201,13 +206,11 @@
               </div>
             </div>
 
-
           </div>
         </div>
-
     </main>
 
-    <div class="scroll">
+    <div class="scroll scroll--rest">
       <div class="scroll__container">
         <p class="scroll__text">
           <a class="scroll__link" href="./contacts.html"><span class="visually-hidden"> Scroll down</span></a>
@@ -215,7 +218,38 @@
       </div>
     </div>
   </div>
+
+  <div class="popup">
+    <div class="popup__wrapper"></div>
+    <form class="popup__form" action="/" method="POST">
+      <button class="popup__close-button popup__close-button--order" type="button"><span
+          class="visually-hidden">Close</span></button>
+      <h2 class="popup__title">Order the VR Planetarium</h2>
+      <p class="popup__text">Share your contacts, and we will call you back within two days</p>
+      <div class="popup__input form-field">
+        <label for="popup-name" class="visually-hidden">Name</label>
+        <input id="popup-name" type="text" name="user-name" autocomplete="on" autofocus placeholder="Your name"
+          required>
+      </div>
+
+      <div class="popup__input form-field">
+        <label for="popup-phone" class="visually-hidden">Phone number</label>
+        <input id="popup-phone" type="tel" name="user-phone" autocomplete="on" placeholder="+312094007"
+          pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$" required>
+      </div>
+
+      <div class="popup__form-message" hidden>
+        <h2 class="popup__title--send">Your message has been sent successfully!</h2>
+        <p class="popup__text--send">We will call you back within two days</p>
+      </div>
+
+      <div class="button__wrapper"><button class="button popup__send-button" type="submit">Sent</button></div>
+      <div class="button__wrapper"><button class="button popup__saccess-button" type="submit" hidden>OK</button></div>
+    </form>
+  </div>
+
   <script type="module" src="./js/index.js"></script>
+  <script type="module" src="./js/technology.js"></script>
   
 </body>
 

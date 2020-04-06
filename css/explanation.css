@@ -248,7 +248,7 @@
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-columns: 420px 420px 420px 420px;
+    grid-template-columns: auto auto auto auto;
     grid-template-rows: auto;
     grid-gap: 40px;
     -ms-scroll-snap-type: x mandatory;
@@ -278,36 +278,27 @@
   border-radius: 50%;
 }
 
-.technology__column-image p {
+.technology__column__image-wrapper {
   position: relative;
   z-index: 1;
   top: 25%;
   right: -25px;
 }
 
-.technology__column-image p::after,
-.technology__column-image p::before {
+.technology__column__image-wrapper::after,
+.technology__column__image-wrapper::before {
   content: "";
   position: absolute;
   border-radius: 50%;
 }
 
-.technology__column-image p::before {
-  border: 1.5px solid #0dd1a2;
+.technology__column__image-wrapper::before {
   width: 24px;
   height: 24px;
   z-index: 20;
-  top: 20px;
-  left: 30px;
-}
-
-.technology__column-image p::after {
-  width: 12px;
-  height: 12px;
-  background-color: #0dd1a2;
-  z-index: 21;
-  top: 26px;
-  left: 36px;
+  top: 10%;
+  left: 5%;
+  background: radial-gradient(circle at center, #0dd1a2 0, #0dd1a2 35%, transparent 35%, transparent 60%, #0dd1a2 60%, #0dd1a2 100%);
 }
 
 .technology__slide {
@@ -352,7 +343,6 @@
 
 .technology__slide:nth-child(4)::before {
   background-image: url("../img/pointer 4.svg");
-
   width: 100px;
   height: 80px;
   top: -70px;
@@ -369,5 +359,16 @@
 
   .technology__slide:nth-child(2n) {
     padding-left: 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .technology__column-image {
+    width: 77vw;
+    height: 77vw;
+  }
+
+  .technology__column-image img {
+    width: 70vw;
   }
 }
