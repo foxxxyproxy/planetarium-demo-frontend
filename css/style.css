@@ -658,7 +658,9 @@
 */
 
 .popup {
+  position:absolute;
   opacity: 0;
+  //left: -1000px;
   pointer-events: none;
   color: var(--main-background-color);
   transition: opacity 200ms;
@@ -667,6 +669,7 @@
 .popup--show {
   opacity: 1;
   pointer-events: auto;
+  //transform: translateX(1000px);
 }
 
 .popup__wrapper {
@@ -699,7 +702,7 @@
   flex-direction: column;
   justify-content: space-between;
   overflow: auto;
-  transform: translateX(-280px);
+  transform: translateX(-1280px);
   transition: transform 300ms;
 }
 
@@ -1213,9 +1216,9 @@
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 410px 410px 410px 410px;
     grid-template-rows: auto;
-    grid-gap: 40px;
+    grid-gap: 10px;
     -ms-scroll-snap-type: x mandatory;
     scroll-snap-type: x mandatory;
     overflow-x: hidden;
@@ -1423,9 +1426,9 @@
   .page-footer__social .page-footer__social-item:last-child {
     margin-right: 0;
   }
-  .page-footer__social {
-    justify-content: flex-end;
-  }
+  /*.page-footer__social {
+    //justify-content: flex-end;
+  }*/
 }
 
 @media (max-width: 770px) {
@@ -1438,10 +1441,11 @@
     margin-bottom: 0;
   }
 
-  .page-footer__social {
+  /*.page-footer__social {
     display: flex;
     justify-content: flex-start;
   }
+  */
 }
 .contacts__form-title {
   margin: 0;
