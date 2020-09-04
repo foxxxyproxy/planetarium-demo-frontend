@@ -1011,6 +1011,7 @@
 .technology__column-image {
   width: 100%;
   margin-bottom: 1em;
+  margin: 0 auto;
 }
 
 .explanation .slider__item img {
@@ -1052,7 +1053,7 @@
 }
 
 @media (max-width: 770px) {
-  .explanation__slider__wrapper, .technology__slider__wrapper  {
+  .explanation__slider__wrapper  {
     display: grid;
     grid-template-columns: 195px 195px 195px 195px;
     grid-template-rows: auto;
@@ -1065,7 +1066,7 @@
     padding-left: 0.5em;
   }
 
-  .explanation__slider, .technology__slider {
+  .explanation__slider {
     width: 100%;
     max-width: 195px;
     margin: 0 auto;
@@ -1207,6 +1208,7 @@
 
   .technology__column-image {
     display: block;
+    margin-bottom: 0.5em;
   }
 
   .technology__slider__wrapper {
@@ -1236,8 +1238,12 @@
   }
 }
 
+
 @media (max-width: 770px) {
-  .technology__slider__wrapper  {
+  
+  .technology__slider__wrapper {
+    padding: 0;
+    margin: 0;
     display: grid;
     grid-template-columns: 300px 300px 300px 300px;
     grid-template-rows: auto;
@@ -1247,19 +1253,15 @@
     overflow-x: hidden;
     overflow-y: hidden;
     scroll-behavior: smooth;
-    padding-left: 0.5em;
   }
 
   .technology__slider {
-    width: 100%;
     max-width: 300px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
   }
-  
-  
 }
+
+
+
 
 .technology__column-image {
   width: 420px;
@@ -1293,6 +1295,7 @@
 
 .technology__slide {
   position: relative;
+  
 }
 
 .technology__slide:nth-child(2n) {
@@ -1352,15 +1355,21 @@
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 770px) {
   .technology__column-image {
-    width: 77vw;
-    height: 77vw;
+    width: 280px;
+    height: 280px;
+    
   }
 
-  .technology__column-image img {
-    width: 70vw;
+  .technology__column-image img, .technology__column-image p {
+    width: 250px;
   }
+
+  .technology__slide{
+
+  }
+  
 }
 
 /*
